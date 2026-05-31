@@ -1,0 +1,14 @@
+name: আমার প্রথম Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello print করো
+        run: echo "কাজ হয়ে গেছে! 🎉"
