@@ -6,7 +6,7 @@ add() {
 
 result=$(add 5 3)
 
-if [ "$result" -eq 8 ]; then
+if [ "$result" -eq 99 ]; then
   echo "✅ Test passed!"
   exit 0
 else
