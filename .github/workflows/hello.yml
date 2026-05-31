@@ -1,14 +1,20 @@
-name: আমার প্রথম Workflow
+name: CI Pipeline
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  hello:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hello print করো
-        run: echo "কাজ হয়ে গেছে! 🎉"
+      - name: Code নামাও
+        uses: actions/checkout@v3
+
+      - name: Test run করো
+        run: bash calculator.sh
